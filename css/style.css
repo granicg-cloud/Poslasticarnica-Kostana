@@ -244,6 +244,16 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   color: var(--brown-light);
 }
+.pill-link {
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.pill-link:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+  transform: translateY(-1px);
+}
 
 .hero-actions {
   display: flex;
