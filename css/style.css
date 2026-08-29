@@ -3,10 +3,13 @@
   --cream-dark: #F1E4CC;
   --brown: #3B2417;
   --brown-light: #6B4A34;
-  --gold: #C6963E;
-  --gold-light: #E4C382;
-  --pink: #D98B93;
+  --gold: #D68A1F;
+  --gold-deep: #B5651A;
+  --gold-light: #F2B84A;
+  --pink: #C2485C;
+  --pink-light: #E88A9A;
   --white: #FFFFFF;
+  --gradient-accent: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold) 45%, var(--pink) 100%);
   --shadow: 0 10px 30px rgba(59, 36, 23, 0.12);
   --radius: 18px;
   --font-head: 'Playfair Display', Georgia, serif;
@@ -157,7 +160,7 @@ a { color: inherit; text-decoration: none; }
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--brown);
+  background: linear-gradient(135deg, var(--brown) 0%, #5A331E 100%);
   color: var(--cream);
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
@@ -209,7 +212,12 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.08;
   margin: 0 0 22px;
 }
-.hero h1 .accent { color: var(--gold); }
+.hero h1 .accent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 .hero-tagline {
   font-family: var(--font-head);
@@ -295,7 +303,10 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-head);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--gold);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .stat-label {
   font-size: 0.82rem;
@@ -469,9 +480,12 @@ a { color: inherit; text-decoration: none; }
   display: block;
   font-family: var(--font-head);
   font-size: 3.2rem;
-  color: var(--gold);
   font-weight: 700;
   line-height: 1;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .score-label {
   font-size: 0.85rem;
