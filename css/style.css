@@ -208,15 +208,16 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   padding: 130px 0 90px;
   text-align: center;
-  background: linear-gradient(135deg, #F9C5D1, #FDF6E3);
 }
 
-.hero-decor { position: absolute; inset: 0; z-index: 0; }
-.decor { position: absolute; opacity: .6; }
-.decor path, .decor circle { fill: var(--gold-light); }
-.decor-1 { width: 420px; top: -160px; right: -140px; }
-.decor-2 { width: 320px; bottom: -140px; left: -120px; }
-.decor-2 circle { fill: var(--pink); opacity: .3; }
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(180deg, rgba(25, 14, 6, 0.6) 0%, rgba(25, 14, 6, 0.78) 100%), url('../assets/img/tulumbe-01.jpg');
+  background-size: cover;
+  background-position: center 65%;
+}
 
 .hero-inner { position: relative; z-index: 1; }
 
@@ -225,19 +226,18 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 3px;
   font-size: 0.8rem;
   font-weight: 800;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--gold-light);
   margin: 0 0 14px;
 }
 .eyebrow.center { text-align: center; }
+.hero .eyebrow { color: var(--gold-light); background: none; -webkit-text-fill-color: unset; }
 
 .hero h1 {
   font-family: var(--font-head);
   font-size: clamp(3rem, 7.5vw, 5.6rem);
   line-height: 1.08;
-  margin: 0 0 22px;
+  margin: 0 0 14px;
+  color: var(--white);
 }
 .hero h1 .accent {
   background: var(--gradient-accent);
@@ -246,11 +246,20 @@ a { color: inherit; text-decoration: none; }
   color: transparent;
 }
 
+.hero-heritage {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin: 0 0 10px;
+}
+
 .hero-tagline {
   font-family: var(--font-head);
   font-style: italic;
   font-size: 1.6rem;
-  color: var(--brown-light);
+  color: var(--cream);
+  opacity: 0.92;
   margin: 0 auto 32px;
   max-width: 560px;
 }
