@@ -177,7 +177,7 @@ a { color: inherit; text-decoration: none; }
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 130px 0 90px;
