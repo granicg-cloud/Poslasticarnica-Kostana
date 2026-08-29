@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const mq = window.matchMedia('(min-width: 621px)');
+    const mq = window.matchMedia('(min-width: 481px)');
     mq.addEventListener('change', (e) => {
       if (e.matches) {
         mobileNav.classList.remove('open');
