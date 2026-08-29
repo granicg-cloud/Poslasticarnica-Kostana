@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    const mq = window.matchMedia('(min-width: 621px)');
+    mq.addEventListener('change', (e) => {
+      if (e.matches) {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // Scroll reveal animation
