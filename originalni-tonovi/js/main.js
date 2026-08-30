@@ -80,10 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
 
+    const lightboxGroups = {};
+
     document.querySelectorAll('.lightbox-gallery').forEach(gallery => {
       const imgs = [...gallery.querySelectorAll('img')].map(img => ({ src: img.currentSrc || img.src, alt: img.alt }));
       const cover = gallery.querySelector('.gallery-item:first-child');
       if (!cover || imgs.length === 0) return;
+
+      const groupName = gallery.dataset.lightboxGroup;
+      if (groupName) lightboxGroups[groupName] = imgs;
 
       if (imgs.length > 1) {
         const badge = document.createElement('span');
@@ -93,6 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       cover.addEventListener('click', () => openLightbox(imgs, 0));
+    });
+
+    // Elementi koji otvaraju postojeću grupu slika (npr. Torte kartica u Ponudi)
+    document.querySelectorAll('[data-lightbox-open]').forEach(trigger => {
+      const groupName = trigger.dataset.lightboxOpen;
+      trigger.classList.add('lightbox-trigger');
+      trigger.addEventListener('click', () => {
+        const imgs = lightboxGroups[groupName];
+        if (imgs && imgs.length) openLightbox(imgs, 0);
+      });
+      const imgs = lightboxGroups[groupName];
+      if (imgs && imgs.length > 1 && !trigger.querySelector('.gallery-cover-badge')) {
+        const badge = document.createElement('span');
+        badge.className = 'gallery-cover-badge';
+        badge.textContent = '+' + (imgs.length - 1) + ' fotografija';
+        trigger.appendChild(badge);
+      }
     });
 
     btnClose.addEventListener('click', closeLightbox);

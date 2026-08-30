@@ -383,12 +383,16 @@ a { color: inherit; text-decoration: none; }
   background-color: var(--cream-dark);
 }
 .card-photo {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: calc(var(--radius) - 6px);
   overflow: hidden;
   margin-bottom: 18px;
   background: linear-gradient(135deg, var(--cream-dark), var(--pink-light));
+}
+.card-photo.lightbox-trigger {
+  cursor: pointer;
 }
 .card-photo img {
   width: 100%;
