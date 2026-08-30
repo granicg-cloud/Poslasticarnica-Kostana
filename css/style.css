@@ -522,6 +522,89 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 20px;
 }
 
+/* Lightbox-only galerije: prikazuje se samo prva slika, ostale kroz lightbox */
+.lightbox-gallery .gallery-item {
+  display: none;
+}
+.lightbox-gallery .gallery-item:first-child {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.gallery-cover-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(20, 12, 6, 0.72);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  backdrop-filter: blur(2px);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 9, 4, 0.92);
+  padding: 24px;
+}
+.lightbox.open { display: flex; }
+.lightbox-img-wrap {
+  position: relative;
+  max-width: min(90vw, 1000px);
+  max-height: 86vh;
+}
+.lightbox-img-wrap img {
+  display: block;
+  max-width: 100%;
+  max-height: 86vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-close, .lightbox-prev, .lightbox-next {
+  position: fixed;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: var(--white);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s ease;
+}
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+  background: rgba(255,255,255,0.25);
+}
+.lightbox-close { top: 24px; right: 24px; }
+.lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-counter {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--cream);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+@media (max-width: 560px) {
+  .lightbox-prev { left: 8px; width: 40px; height: 40px; }
+  .lightbox-next { right: 8px; width: 40px; height: 40px; }
+  .lightbox-close { top: 12px; right: 12px; width: 40px; height: 40px; }
+}
+
 /* ---------- Galerija ---------- */
 .gallery-grid {
   display: grid;

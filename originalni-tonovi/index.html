@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -200,7 +200,7 @@
 
       <div class="torte-gallery">
         <p class="eyebrow reveal center">Naše torte</p>
-        <div class="gallery-grid">
+        <div class="gallery-grid lightbox-gallery" data-lightbox-group="torte">
           <figure class="gallery-item reveal">
             <img src="assets/img/cokoladna-rolat-torta.jpg" alt="Čokoladna rolat torta sa prelivom" loading="lazy" width="1200" height="1600">
           </figure>
@@ -387,6 +387,16 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Zatvori">&times;</button>
+  <button type="button" class="lightbox-prev" id="lightbox-prev" aria-label="Prethodna slika">&#10094;</button>
+  <div class="lightbox-img-wrap">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <button type="button" class="lightbox-next" id="lightbox-next" aria-label="Sledeća slika">&#10095;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="js/main.js?v=3"></script>
 </body>
 </html>
