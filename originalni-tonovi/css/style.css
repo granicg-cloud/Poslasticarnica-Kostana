@@ -862,5 +862,5 @@ blockquote cite {
   .hero { padding: 90px 0 60px; }
   .section { padding: 64px 0; }
   .review-highlight { padding: 28px; }
-  .footer-inner { flex-direction: column; text-align: center; }
+  .stats { flex-direction: column; gap: 18px; }
 }
