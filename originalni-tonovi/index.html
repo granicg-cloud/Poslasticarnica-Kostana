@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -149,14 +149,14 @@
 
       <div class="cards">
         <article class="card reveal">
-          <div class="card-photo">
+          <div class="card-photo" data-lightbox-open="torte">
             <img src="assets/img/cokoladna-torta-secena.jpg" alt="Čokoladna torta iz Poslastičarnice Koštana" loading="lazy">
           </div>
           <h3>Torte</h3>
           <p>Klasične i savremene torte za rođendane, proslave i posebne trenutke, po porudžbini i uz dogovor.</p>
         </article>
         <article class="card reveal">
-          <div class="card-photo">
+          <div class="card-photo" data-lightbox-open="kolaci">
             <img src="assets/img/tulumbe-01.jpg" alt="Sveže tulumbe u Poslastičarnici Koštana" loading="lazy">
           </div>
           <h3>Kolači</h3>
@@ -184,6 +184,72 @@
           <h3>Za posebne prilike</h3>
           <p>Slavlja, venčanja, poslovni događaji, javite se na vreme i pravimo poslasticu po meri prilike.</p>
         </article>
+      </div>
+
+      <div class="torte-gallery">
+        <p class="eyebrow reveal center">Naše torte</p>
+        <div class="gallery-grid lightbox-gallery" data-lightbox-group="torte">
+          <figure class="gallery-item reveal">
+            <img src="assets/img/cokoladna-rolat-torta.jpg" alt="Čokoladna rolat torta sa prelivom" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/cokoladna-torta-secena.jpg" alt="Sečena čokoladna torta sa kremom" loading="lazy" width="4032" height="3024">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/mango-torta.jpg" alt="Torta sa mango premazom" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/mango-torta-parce.jpg" alt="Parče torte sa mango premazom" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/pistach-torta.jpg" alt="Pistać torta u Poslastičarnici Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/pistach-torta-parce.jpg" alt="Parče pistać torte sa slojevima" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/visnja-torta.jpg" alt="Torta sa višnjama u Poslastičarnici Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/cokoladna-dijamant-torta.jpg" alt="Čokoladna torta sa dijamant dekoracijom" loading="lazy" width="1600" height="1438">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/cokoladna-dijamant-torta-parce.jpg" alt="Parče slojevite čokoladne torte" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/svadbena-torta.jpg" alt="Svadbena torta iz Poslastičarnice Koštana" loading="lazy" width="1108" height="989">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/lesnik-torta.jpg" alt="Lešnik torta u Poslastičarnici Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+        </div>
+      </div>
+
+      <div class="torte-gallery">
+        <p class="eyebrow reveal center">Naši kolači</p>
+        <div class="gallery-grid lightbox-gallery" data-lightbox-group="kolaci">
+          <figure class="gallery-item reveal">
+            <img src="assets/img/kremsnite-tresnja.jpg" alt="Kremšnite sa višnjama u Poslastičarnici Koštana" loading="lazy" width="1600" height="1338">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/kremrolat-02.jpg" alt="Kremrolat izbliza u izlogu Poslastičarnice Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/macaronke-kreme.jpg" alt="Makaronke sa kremom u Poslastičarnici Koštana" loading="lazy" width="960" height="960">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/pralinice-mix.jpg" alt="Mix pralina i kolača u Poslastičarnici Koštana" loading="lazy" width="960" height="720">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/kremrolat-01.jpg" alt="Kremrolat na tacni u Poslastičarnici Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/tulumbe-izlog.jpg" alt="Tulumbe u izlogu Poslastičarnice Koštana" loading="lazy" width="720" height="960">
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/img/becke-snite.jpg" alt="Bečke šnite u Poslastičarnici Koštana" loading="lazy" width="1600" height="1200">
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -351,6 +417,6 @@
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>
